@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.amaap.scrabble.game.ScrabbleTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2024-03-15T17:39:03" hostname="LAPTOP-205J7BQ6" time="0.035">
+  <properties/>
+  <testcase name="shouldAbleToThrowAnExceptionWhenWordContainsSpecialCharacters()" classname="org.amaap.scrabble.game.ScrabbleTest" time="0.027"/>
+  <testcase name="shouldAbleToReturnTheScoreForWord()" classname="org.amaap.scrabble.game.ScrabbleTest" time="0.002"/>
+  <testcase name="shouldAbleToReturnTheScoreForSmallWord()" classname="org.amaap.scrabble.game.ScrabbleTest" time="0.001"/>
+  <testcase name="shouldAbleToThrowAnExceptionWhenWordContainsDigits()" classname="org.amaap.scrabble.game.ScrabbleTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
