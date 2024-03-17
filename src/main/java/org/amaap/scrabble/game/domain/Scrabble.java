@@ -19,13 +19,12 @@ public class Scrabble {
             throw new WordContainsDigitsException("Word Contains Digits");
         if (Validation.isWordContainsSpecialCharacters(word))
             throw new WordContainsSpecialCharactersException("Word Contain Special Characters");
-        return score(word);
+        return score(word.toUpperCase());
     }
     private static int score(String word) {
         int score = 0;
-        String upperCaseWord = word.toUpperCase();
         for (int i = 0; i < word.length(); i++) {
-            score += POINTS[upperCaseWord.charAt(i) - 'A'];
+            score += POINTS[word.charAt(i) - 'A'];
         }
         return score;
 
