@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="org.amaap.scrabble.game.ScrabbleTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2024-03-17T14:40:33" hostname="LAPTOP-205J7BQ6" time="0.058">
+<testsuite name="org.amaap.scrabble.game.ScrabbleTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2024-03-17T15:10:47" hostname="LAPTOP-205J7BQ6" time="0.087">
   <properties/>
-  <testcase name="shouldAbleToThrowAnExceptionWhenWordContainsSpecialCharacters()" classname="org.amaap.scrabble.game.ScrabbleTest" time="0.038"/>
+  <testcase name="shouldAbleToThrowAnExceptionWhenWordContainsSpecialCharacters()" classname="org.amaap.scrabble.game.ScrabbleTest" time="0.056"/>
   <testcase name="shouldAbleToReturnTheScoreForSmallerAlphabet()" classname="org.amaap.scrabble.game.ScrabbleTest" time="0.004"/>
-  <testcase name="shouldThrowExceptionForWordWithLessThanThreeCharacters()" classname="org.amaap.scrabble.game.ScrabbleTest" time="0.001"/>
-  <testcase name="shouldThrowExceptionForNullWord()" classname="org.amaap.scrabble.game.ScrabbleTest" time="0.002"/>
-  <testcase name="shouldAbleToThrowAnExceptionWhenWordContainsDigits()" classname="org.amaap.scrabble.game.ScrabbleTest" time="0.001"/>
-  <testcase name="shouldCalculateScoreForWordWithAllLetters()" classname="org.amaap.scrabble.game.ScrabbleTest" time="0.001"/>
-  <testcase name="shouldAbleToThrowAnExceptionWhenWordIsEmpty()" classname="org.amaap.scrabble.game.ScrabbleTest" time="0.002"/>
-  <testcase name="shouldAbleToReturnTheScoreForCapitalAlphabetWords()" classname="org.amaap.scrabble.game.ScrabbleTest" time="0.0"/>
+  <testcase name="shouldThrowExceptionForWordWithLessThanThreeCharacters()" classname="org.amaap.scrabble.game.ScrabbleTest" time="0.002"/>
+  <testcase name="shouldThrowExceptionForNullWord()" classname="org.amaap.scrabble.game.ScrabbleTest" time="0.003"/>
+  <testcase name="shouldAbleToThrowAnExceptionWhenWordContainsDigits()" classname="org.amaap.scrabble.game.ScrabbleTest" time="0.005"/>
+  <testcase name="shouldCalculateScoreForWordWithAllLetters()" classname="org.amaap.scrabble.game.ScrabbleTest" time="0.002"/>
+  <testcase name="shouldAbleToThrowAnExceptionWhenWordIsEmpty()" classname="org.amaap.scrabble.game.ScrabbleTest" time="0.001"/>
+  <testcase name="shouldAbleToReturnTheScoreForCapitalAlphabetWords()" classname="org.amaap.scrabble.game.ScrabbleTest" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

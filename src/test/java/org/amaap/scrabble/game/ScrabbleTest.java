@@ -13,17 +13,14 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 public class ScrabbleTest {
     @Test
     void shouldAbleToReturnTheScoreForCapitalAlphabetWords() throws InvalidWordException {
-        Scrabble scrabble = Scrabble.calculateScore("GUARDIAN");
-        int actual = scrabble.score(scrabble.getWord());
-
+        int actual = Scrabble.calculateScoreAndValidateWord("GUARDIAN");
         assertEquals(10, actual);
 
     }
 
     @Test
     void shouldAbleToReturnTheScoreForSmallerAlphabet() throws InvalidWordException {
-        Scrabble scrabble = Scrabble.calculateScore("guardian");
-        int actual = scrabble.score(scrabble.getWord());
+        int actual = Scrabble.calculateScoreAndValidateWord("guardian");
 
         assertEquals(10, actual);
 
@@ -31,39 +28,38 @@ public class ScrabbleTest {
 
     @Test
     void shouldThrowExceptionForNullWord() {
-        assertThrows(EmptyWordException.class, () -> Scrabble.calculateScore(null));
+        assertThrows(EmptyWordException.class, () -> Scrabble.calculateScoreAndValidateWord(null));
     }
 
     @Test
     void shouldAbleToThrowAnExceptionWhenWordIsEmpty() {
         String word = "";
-        assertThrows(EmptyWordException.class, () -> Scrabble.calculateScore(word));
+        assertThrows(EmptyWordException.class, () -> Scrabble.calculateScoreAndValidateWord(word));
     }
 
     @Test
     void shouldAbleToThrowAnExceptionWhenWordContainsDigits() {
         String word = "34ANT";
-        assertThrows(WordContainsDigitsException.class, () -> Scrabble.calculateScore(word));
+        assertThrows(WordContainsDigitsException.class, () -> Scrabble.calculateScoreAndValidateWord(word));
     }
 
     @Test
     void shouldAbleToThrowAnExceptionWhenWordContainsSpecialCharacters() {
         String word = "&^%$ANT";
         String word1 = "&&&&*(";
-        assertThrows(WordContainsSpecialCharactersException.class, () -> Scrabble.calculateScore(word));
-        assertThrows(WordContainsSpecialCharactersException.class, () -> Scrabble.calculateScore(word1));
+        assertThrows(WordContainsSpecialCharactersException.class, () -> Scrabble.calculateScoreAndValidateWord(word));
+        assertThrows(WordContainsSpecialCharactersException.class, () -> Scrabble.calculateScoreAndValidateWord(word1));
     }
 
     @Test
     void shouldCalculateScoreForWordWithAllLetters() throws InvalidWordException {
-        Scrabble scrabble = Scrabble.calculateScore("ABCDEFGHIJKLMNOPQRSTUVWXYZ");
-        int actual = scrabble.score(scrabble.getWord());
+        int actual = Scrabble.calculateScoreAndValidateWord("ABCDEFGHIJKLMNOPQRSTUVWXYZ");
         assertEquals(87, actual);
     }
 
     @Test
     void shouldThrowExceptionForWordWithLessThanThreeCharacters() {
-        assertThrows(InvalidWordException.class, () -> Scrabble.calculateScore("Z"));
+        assertThrows(InvalidWordException.class, () -> Scrabble.calculateScoreAndValidateWord("Z"));
     }
 
 }
