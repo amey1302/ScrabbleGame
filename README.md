@@ -16,3 +16,16 @@ In the English alphabet, letters have the following point scores:
 
 Calculate the score for a word. The score is the sum of the points for the letters that make up a word. 
 - For example: *GUARDIAN = 2 + 1 + 1 + 1 + 2 + 1 + 1 + 1 = 10.*
+
+Solution :
+## Class Scrabble 
+ - ## State 
+    - ### final int POINTS[] : integer array
+ - ## Behaviour
+    - ### calculateScoreAndValidateWord(String word)
+    - ### score(String word) :-> 
+## Class Validation :
+  - Perform validation of Words 
+## class Exception :
+  - Contains all Defined Validation
+   
