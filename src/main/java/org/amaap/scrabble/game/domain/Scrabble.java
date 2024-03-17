@@ -1,9 +1,10 @@
-package org.amaap.scrabble.game;
+package org.amaap.scrabble.game.domain;
 
 import org.amaap.scrabble.game.exception.EmptyWordException;
 import org.amaap.scrabble.game.exception.InvalidWordException;
 import org.amaap.scrabble.game.exception.WordContainsDigitsException;
 import org.amaap.scrabble.game.exception.WordContainsSpecialCharactersException;
+import org.amaap.scrabble.game.validation.Validation;
 
 public class Scrabble {
     String word;
@@ -14,13 +15,13 @@ public class Scrabble {
     }
 
     public static Scrabble calculateScore(String word) throws InvalidWordException {
-        if (word == null || word.isEmpty())
+        if (Validation.isWordNullOrEmpty(word))
             throw new EmptyWordException("Word Should have Characters");
-        if(word.length() < 3)
+        if (word.length() < 3)
             throw new InvalidWordException("Word should have minimum 3 Characters");
-        if (word.matches(".*\\d.*"))
+        if (Validation.isWordContainsDigits(word))
             throw new WordContainsDigitsException("Word Contains Digits");
-        else if (word.matches(".*[^A-Z^a-z].*"))
+        if (Validation.isWordContainsSpecialCharacters(word))
             throw new WordContainsSpecialCharactersException("Word Contain Special Characters");
 
         return new Scrabble(word);

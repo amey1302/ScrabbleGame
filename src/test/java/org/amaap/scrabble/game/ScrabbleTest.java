@@ -1,5 +1,6 @@
 package org.amaap.scrabble.game;
 
+import org.amaap.scrabble.game.domain.Scrabble;
 import org.amaap.scrabble.game.exception.EmptyWordException;
 import org.amaap.scrabble.game.exception.InvalidWordException;
 import org.amaap.scrabble.game.exception.WordContainsDigitsException;
@@ -30,37 +31,27 @@ public class ScrabbleTest {
 
     @Test
     void shouldThrowExceptionForNullWord() {
-        assertThrows(EmptyWordException.class, () -> {
-            Scrabble.calculateScore(null);
-        });
+        assertThrows(EmptyWordException.class, () -> Scrabble.calculateScore(null));
     }
 
     @Test
     void shouldAbleToThrowAnExceptionWhenWordIsEmpty() {
         String word = "";
-        assertThrows(EmptyWordException.class, () -> {
-            Scrabble.calculateScore(word);
-        });
+        assertThrows(EmptyWordException.class, () -> Scrabble.calculateScore(word));
     }
 
     @Test
     void shouldAbleToThrowAnExceptionWhenWordContainsDigits() {
         String word = "34ANT";
-        assertThrows(WordContainsDigitsException.class, () -> {
-            Scrabble.calculateScore(word);
-        });
+        assertThrows(WordContainsDigitsException.class, () -> Scrabble.calculateScore(word));
     }
 
     @Test
     void shouldAbleToThrowAnExceptionWhenWordContainsSpecialCharacters() {
         String word = "&^%$ANT";
         String word1 = "&&&&*(";
-        assertThrows(WordContainsSpecialCharactersException.class, () -> {
-            Scrabble.calculateScore(word);
-        });
-        assertThrows(WordContainsSpecialCharactersException.class, () -> {
-            Scrabble.calculateScore(word1);
-        });
+        assertThrows(WordContainsSpecialCharactersException.class, () -> Scrabble.calculateScore(word));
+        assertThrows(WordContainsSpecialCharactersException.class, () -> Scrabble.calculateScore(word1));
     }
 
     @Test
@@ -72,9 +63,7 @@ public class ScrabbleTest {
 
     @Test
     void shouldThrowExceptionForWordWithLessThanThreeCharacters() {
-        assertThrows(InvalidWordException.class, () -> {
-            Scrabble.calculateScore("Z");
-        });
+        assertThrows(InvalidWordException.class, () -> Scrabble.calculateScore("Z"));
     }
 
 }
