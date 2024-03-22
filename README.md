@@ -23,9 +23,11 @@ Solution :
     - ### final int POINTS[] : integer array
  - ## Behaviour
     - ### calculateScoreAndValidateWord(String word)
-    - ### score(String word) :-> 
+    - ### score(String word) :-> int
+    - ### scoreWithLetterMultiplier():-> int
+    - ### scoreWithWordMultiplier() :-> int
 ## Class Validation :
   - Perform validation of Words 
 ## class Exception :
   - Contains all Defined Validation
-   
+
