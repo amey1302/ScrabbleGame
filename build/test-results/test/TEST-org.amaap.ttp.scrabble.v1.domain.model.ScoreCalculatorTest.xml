@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.amaap.ttp.scrabble.v1.domain.model.ScoreCalculatorTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2024-03-31T19:39:16" hostname="LAPTOP-205J7BQ6" time="0.059">
+  <properties/>
+  <testcase name="shouldAbleToReturnTheScoreForDoubleOrTripleLetter()" classname="org.amaap.ttp.scrabble.v1.domain.model.ScoreCalculatorTest" time="0.035"/>
+  <testcase name="shouldAbleToReturnTheScoreForSmallerAlphabet()" classname="org.amaap.ttp.scrabble.v1.domain.model.ScoreCalculatorTest" time="0.002"/>
+  <testcase name="shouldThrowExceptionForNullWord()" classname="org.amaap.ttp.scrabble.v1.domain.model.ScoreCalculatorTest" time="0.005"/>
+  <testcase name="shouldAbleToThrowAnExceptionWhenWordIsEmpty()" classname="org.amaap.ttp.scrabble.v1.domain.model.ScoreCalculatorTest" time="0.003"/>
+  <testcase name="shouldAbleToReturnTheScoreForCapitalAlphabetWords()" classname="org.amaap.ttp.scrabble.v1.domain.model.ScoreCalculatorTest" time="0.004"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

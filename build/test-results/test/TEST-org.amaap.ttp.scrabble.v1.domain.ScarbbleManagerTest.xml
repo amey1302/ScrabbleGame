@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="org.amaap.ttp.scrabble.v1.domain.ScarbbleManagerTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2024-03-31T19:37:10" hostname="LAPTOP-205J7BQ6" time="0.031">
-  <properties/>
-  <testcase name="shouldBeAbleToGetTheScoreForGivenWord()" classname="org.amaap.ttp.scrabble.v1.domain.ScarbbleManagerTest" time="0.025"/>
-  <testcase name="shouldBeAbleToGetSingleInstance()" classname="org.amaap.ttp.scrabble.v1.domain.ScarbbleManagerTest" time="0.004"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>
