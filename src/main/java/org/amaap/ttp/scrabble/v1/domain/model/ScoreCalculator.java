@@ -4,6 +4,10 @@ import org.amaap.ttp.scrabble.v1.domain.model.exception.EmptyWordException;
 import org.amaap.ttp.scrabble.v1.domain.model.exception.InvalidWordException;
 import org.amaap.ttp.scrabble.v1.domain.model.exception.WordContainsDigitsException;
 import org.amaap.ttp.scrabble.v1.domain.model.exception.WordContainsSpecialCharactersException;
+import org.amaap.ttp.scrabble.v1.domain.model.validator.WordValidator;
+
+import static org.amaap.ttp.scrabble.v1.domain.model.validator.WordValidator.isWordContainsDigits;
+import static org.amaap.ttp.scrabble.v1.domain.model.validator.WordValidator.isWordContainsSpecialCharacters;
 
 public class ScoreCalculator {
     private static final int[] POINTS = {1, 3, 3, 2, 1, 4, 2, 4, 1, 8, 5, 1, 3, 1, 1, 3, 10, 1, 1, 1, 1, 4, 4, 8, 4, 10};
@@ -28,11 +32,4 @@ public class ScoreCalculator {
         }
         return score;
     }
-    public static boolean isWordContainsDigits(String word) {
-        return word.matches(".*\\d.*");
-    }
-    public static boolean isWordContainsSpecialCharacters(String word) {
-        return word.matches(".*[^A-Za-z].*");
-    }
-
 }
