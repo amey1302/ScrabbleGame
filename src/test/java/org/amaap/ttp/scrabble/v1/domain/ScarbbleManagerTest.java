@@ -16,5 +16,16 @@ public class ScarbbleManagerTest {
         // act & assert
         assertEquals(scarbbleManager,scarbbleManager1);
     }
+    @Test
+    void shouldBeAbleToGetTheScoreForGivenWord() throws InvalidWordException {
+        // arrange
+        int expectedScore = 10;
 
+        // act
+        int actualScore = scarbbleManager.getScoreForWord("GUARDIAN");
+
+        // assert
+        assertEquals(expectedScore,actualScore);
+
+    }
 }
