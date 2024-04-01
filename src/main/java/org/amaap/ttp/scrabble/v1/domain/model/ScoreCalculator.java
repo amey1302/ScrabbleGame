@@ -28,6 +28,7 @@ public class ScoreCalculator {
         }
         return score;
     }
+
     private int getScore(char c) {
         return PointAllocator.getScoreMapping().entrySet().stream()
                 .filter(entry -> entry.getValue().contains(String.valueOf(c)))
@@ -35,7 +36,24 @@ public class ScoreCalculator {
                 .findFirst()
                 .orElse(0);
     }
+
     public int getScoreForWordWithMultiplier(String word, int wordMultiplier) throws InvalidWordException {
         return getScoreForWord(word) * wordMultiplier;
     }
+
+    public int getScoreWithLetterMultiplier(String originalWord, char letterToMultiply, int multiplier) {
+        int score = 0;
+        String upperCaseWord = originalWord.toUpperCase();
+        for (int i = 0; i < upperCaseWord.length(); i++) {
+            char currentChar = upperCaseWord.charAt(i);
+            int letterScore = getScore(currentChar);
+            if (currentChar == Character.toUpperCase(letterToMultiply)) {
+                score += (multiplier * letterScore);
+            } else {
+                score += letterScore;
+            }
+        }
+        return score;
+    }
+
 }

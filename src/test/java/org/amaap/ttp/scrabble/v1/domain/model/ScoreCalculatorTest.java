@@ -81,4 +81,33 @@ class ScoreCalculatorTest {
         // assert
         assertEquals(expected, actual);
     }
+    @Test
+    void shouldBeAbleToReturnScoreForWordWithDoubleLetter() {
+        // arrange
+        String word = "GUARDIAN";
+        char letterToDouble = 'A';
+        int multiplier = 2;
+        int expectedScore = 10 + 2 + 1 + 1 + 1 + 1 + 1 + 1;
+
+        // act
+        int actualScore = scoreCalculator.getScoreWithLetterMultiplier(word, letterToDouble, multiplier);
+
+        // assert
+        assertEquals(expectedScore, actualScore);
+    }
+
+    @Test
+    void shouldBeAbleToReturnScoreForWordWithTripleLetter() {
+        // arrange
+        String word = "CAT";
+        char letterToTriple = 'T';
+        int multiplier = 3;
+        int expectedScore = 3 + 1 + (3 * 1);
+
+        // act
+        int actualScore = scoreCalculator.getScoreWithLetterMultiplier(word, letterToTriple, multiplier);
+
+        // assert
+        assertEquals(expectedScore, actualScore);
+    }
 }

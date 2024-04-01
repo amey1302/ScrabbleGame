@@ -35,9 +35,37 @@ public class ScrabbleManagerTest {
         String word ="ABC";
 
         // act
-        int actualScore = scarbbleManager.getScoreWordMultiplier(word,2);
+        int actualScore = scarbbleManager.getScoreForWordMultiplier(word,2);
 
         // assert
         assertEquals(expectedScore,actualScore);
     }
+    @Test
+    void shouldBeAbleToGetScoreForDoubleLetter() throws InvalidWordException {
+        // arrange
+        int expectedDoubleScore = 8;
+        String word ="ABC";
+        char letterToDouble = 'A';
+
+        // act
+        int actualScore = scarbbleManager.getScoreForLetterWithMultiplier(word, letterToDouble,2);
+
+        // assert
+        assertEquals(expectedDoubleScore, actualScore);
+    }
+
+    @Test
+    void shouldBeAbleToGetScoreForTripleLetter() throws InvalidWordException {
+        // arrange
+        int expectedTripleScore = 13;
+        String word ="ABC";
+        char letterToTriple = 'C';
+
+        // act
+        int actualScore = scarbbleManager.getScoreForLetterWithMultiplier(word, letterToTriple,3);
+
+        // assert
+        assertEquals(expectedTripleScore, actualScore);
+    }
 }
+

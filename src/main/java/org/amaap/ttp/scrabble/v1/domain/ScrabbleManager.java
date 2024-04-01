@@ -20,9 +20,13 @@ public class ScrabbleManager {
         return scoreCalculator.getScoreForWord(word);
     }
 
-    public int getScoreWordMultiplier(String word, int multiplier) throws InvalidWordException {
+    public int getScoreForWordMultiplier(String word, int multiplier) throws InvalidWordException {
         ScoreCalculator scoreCalculator = new ScoreCalculator();
         return scoreCalculator.getScoreForWordWithMultiplier(word, multiplier);
+    }
+    public int getScoreForLetterWithMultiplier(String word,char letterToMultiply, int multiplier){
+        ScoreCalculator scoreCalculator = new ScoreCalculator();
+        return scoreCalculator.getScoreWithLetterMultiplier(word,letterToMultiply,multiplier);
     }
 
 }
