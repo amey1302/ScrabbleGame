@@ -28,7 +28,6 @@ public class ScrabbleManagerTest {
         assertEquals(expectedScore,actualScore);
 
     }
-    //Todo : To work with extensions
     @Test
     void shouldBeAbleToGetScoreForDoubleLetter(){
 

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.amaap.ttp.scrabble.v1.domain.ScrabbleManagerTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2024-04-01T17:44:22" hostname="LAPTOP-205J7BQ6" time="0.054">
+  <properties/>
+  <testcase name="shouldBeAbleToGetTheScoreForGivenWord()" classname="org.amaap.ttp.scrabble.v1.domain.ScrabbleManagerTest" time="0.042"/>
+  <testcase name="shouldBeAbleToGetScoreForDoubleLetter()" classname="org.amaap.ttp.scrabble.v1.domain.ScrabbleManagerTest" time="0.001"/>
+  <testcase name="shouldBeAbleToGetSingleInstance()" classname="org.amaap.ttp.scrabble.v1.domain.ScrabbleManagerTest" time="0.006"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

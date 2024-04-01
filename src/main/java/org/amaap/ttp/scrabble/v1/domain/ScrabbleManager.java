@@ -17,4 +17,6 @@ public class ScrabbleManager {
         ScoreCalculator scoreCalculator = new ScoreCalculator();
         return scoreCalculator.getScoreForWord(word);
     }
+
+
 }
