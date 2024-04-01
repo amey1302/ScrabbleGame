@@ -5,13 +5,13 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class ScarbbleManagerTest {
-    ScarbbleManager scarbbleManager = ScarbbleManager.getInstance();
+public class ScrabbleManagerTest {
+    ScrabbleManager scarbbleManager = ScrabbleManager.getInstance();
 
     @Test
     void shouldBeAbleToGetSingleInstance(){
         // arrange
-        ScarbbleManager scarbbleManager1 = ScarbbleManager.getInstance();
+        ScrabbleManager scarbbleManager1 = ScrabbleManager.getInstance();
 
         // act & assert
         assertEquals(scarbbleManager,scarbbleManager1);
@@ -26,6 +26,11 @@ public class ScarbbleManagerTest {
 
         // assert
         assertEquals(expectedScore,actualScore);
+
+    }
+    //Todo : To work with extensions
+    @Test
+    void shouldBeAbleToGetScoreForDoubleLetter(){
 
     }
 }

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.amaap.ttp.scrabble.v1.domain.model.ScrabbleTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2024-04-01T12:50:25" hostname="LAPTOP-205J7BQ6" time="0.013">
+  <properties/>
+  <testcase name="shouldBeAbleToThrowAnExceptionWhenWordContainsSpecialCharacters()" classname="org.amaap.ttp.scrabble.v1.domain.model.ScrabbleTest" time="0.004"/>
+  <testcase name="shouldBeAbleToThrowAnExceptionWhenWordContainsDigits()" classname="org.amaap.ttp.scrabble.v1.domain.model.ScrabbleTest" time="0.002"/>
+  <testcase name="shouldBeAbleToThrowExceptionForNullWord()" classname="org.amaap.ttp.scrabble.v1.domain.model.ScrabbleTest" time="0.001"/>
+  <testcase name="shouldBeAbleToThrowExceptionForEmptyWord()" classname="org.amaap.ttp.scrabble.v1.domain.model.ScrabbleTest" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

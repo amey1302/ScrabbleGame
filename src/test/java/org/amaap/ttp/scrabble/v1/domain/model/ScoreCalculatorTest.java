@@ -16,6 +16,7 @@ class ScoreCalculatorTest {
     void shouldBeAbleToReturnTheScoreForCapitalAlphabetWords() throws InvalidWordException {
         // arrange
         String word = "GUARDIAN";
+        Scrabble scrabble = Scrabble.accept(word);
         int expected = 10;
 
         // act
@@ -39,45 +40,7 @@ class ScoreCalculatorTest {
     }
 
     @Test
-    void shouldBeAbleToThrowExceptionForNullWord() {
-        // arrange
-        String word = null;
-
-        // act & assert
-        assertThrows(EmptyWordException.class, () -> scoreCalculator.getScoreForWord(word));
-    }
-
-    @Test
-    void shouldBeAbleToThrowAnExceptionWhenWordIsEmpty() {
-        // arrange
-        String word = "";
-
-        // act & assert
-        assertThrows(EmptyWordException.class, () -> scoreCalculator.getScoreForWord(word));
-    }
-
-    @Test
-    void shouldBeAbleToThrowAnExceptionWhenWordContainsDigits() {
-        // arrange
-        String word = "34ANT";
-
-        // act & assert
-        assertThrows(WordContainsDigitsException.class, () -> scoreCalculator.getScoreForWord(word));
-    }
-
-    @Test
-    void shouldBeAbleToThrowAnExceptionWhenWordContainsSpecialCharacters() {
-        // arrange
-        String word = "&^%$ANT";
-        String word1 = "&&&&*(";
-
-        // act & assert
-        assertThrows(WordContainsSpecialCharactersException.class, () -> scoreCalculator.getScoreForWord(word));
-        assertThrows(WordContainsSpecialCharactersException.class, () -> scoreCalculator.getScoreForWord(word1));
-    }
-
-    @Test
-    void shouldBeCalculateScoreForWordWithAllLetters() throws InvalidWordException {
+    void shouldBeAbleToCalculateScoreForWordWithAllLetters() throws InvalidWordException {
         // arrange
         String word = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
         int expected = 87;

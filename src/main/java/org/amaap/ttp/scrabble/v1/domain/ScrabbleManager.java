@@ -1,21 +1,22 @@
 package org.amaap.ttp.scrabble.v1.domain;
 
 import org.amaap.ttp.scrabble.v1.domain.model.ScoreCalculator;
+import org.amaap.ttp.scrabble.v1.domain.model.Scrabble;
 import org.amaap.ttp.scrabble.v1.domain.model.exception.InvalidWordException;
 
-public class ScarbbleManager {
-    private static ScarbbleManager scarbbleManager;
+public class ScrabbleManager {
+    private static ScrabbleManager scarbbleManager;
     ScoreCalculator calculator = new ScoreCalculator();
-    private ScarbbleManager() {
-
+    private ScrabbleManager() {
     }
-    public static synchronized ScarbbleManager getInstance(){
+    public static synchronized ScrabbleManager getInstance(){
         if (scarbbleManager == null)
-            scarbbleManager = new ScarbbleManager();
+            scarbbleManager = new ScrabbleManager();
         return scarbbleManager;
     }
 
     public int getScoreForWord(String word) throws InvalidWordException {
-        return calculator.getScoreForWord(word);
+        Scrabble scrabble = Scrabble.accept(word);
+        return scrabble.getScoreForWord(scrabble.getWord());
     }
 }
