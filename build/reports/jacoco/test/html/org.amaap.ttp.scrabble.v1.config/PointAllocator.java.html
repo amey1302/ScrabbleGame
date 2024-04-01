@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>PointAllocator.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">ScrabbleV1</a> &gt; <a href="index.source.html" class="el_package">org.amaap.ttp.scrabble.v1.config</a> &gt; <span class="el_source">PointAllocator.java</span></div><h1>PointAllocator.java</h1><pre class="source lang-java linenums">package org.amaap.ttp.scrabble.v1.config;
+
+import org.amaap.ttp.scrabble.v1.config.exception.InvalidLetterException;
+
+import java.util.HashMap;
+import java.util.Map;
+
+<span class="fc" id="L8">public class PointAllocator {</span>
+
+<span class="fc" id="L10">    public static Map&lt;Integer, String&gt; scoreMapping = new HashMap&lt;&gt;();</span>
+    static {
+<span class="fc" id="L12">        scoreMapping.put(1, &quot;EAIONRTLSU&quot;);</span>
+<span class="fc" id="L13">        scoreMapping.put(2, &quot;DG&quot;);</span>
+<span class="fc" id="L14">        scoreMapping.put(3, &quot;BCMP&quot;);</span>
+<span class="fc" id="L15">        scoreMapping.put(4, &quot;FHVWY&quot;);</span>
+<span class="fc" id="L16">        scoreMapping.put(5, &quot;K&quot;);</span>
+<span class="fc" id="L17">        scoreMapping.put(8, &quot;JX&quot;);</span>
+<span class="fc" id="L18">        scoreMapping.put(10, &quot;QZ&quot;);</span>
+<span class="fc" id="L19">    }</span>
+    public static Map&lt;Integer, String&gt; getScoreMapping() {
+<span class="fc" id="L21">        return scoreMapping;</span>
+    }
+    static int getScoreForLetter(char letter) throws InvalidLetterException {
+<span class="fc bfc" id="L24" title="All 2 branches covered.">        for (Map.Entry&lt;Integer, String&gt; entry : PointAllocator.getScoreMapping().entrySet()) {</span>
+<span class="fc bfc" id="L25" title="All 2 branches covered.">            if (entry.getValue().indexOf(letter) != -1) {</span>
+<span class="fc" id="L26">                return entry.getKey();</span>
+            }
+<span class="fc" id="L28">        }</span>
+<span class="fc" id="L29">        throw new InvalidLetterException(&quot;Invalid letter: &quot; + letter);</span>
+    }
+
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

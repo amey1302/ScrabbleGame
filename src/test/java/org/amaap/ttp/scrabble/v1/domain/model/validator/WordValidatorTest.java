@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class WordValidatorTest {
+    WordValidator wordValidator = new WordValidator();
 
     @Test
     void shouldBeAbleToReturnTrueWhenWordContainsDigits() {
@@ -12,7 +13,7 @@ class WordValidatorTest {
         String word = "hello123";
 
         // act
-        boolean result = WordValidator.isWordContainsDigits(word);
+        boolean result = wordValidator.isWordContainsDigits(word);
 
         // assert
         assertTrue(result);
@@ -24,7 +25,7 @@ class WordValidatorTest {
         String word = "hello";
 
         // act
-        boolean result = WordValidator.isWordContainsDigits(word);
+        boolean result = wordValidator.isWordContainsDigits(word);
 
         // assert
         assertFalse(result);
@@ -36,7 +37,7 @@ class WordValidatorTest {
         String word = "hello@world";
 
         // act
-        boolean result = WordValidator.isWordContainsSpecialCharacters(word);
+        boolean result = wordValidator.isWordContainsSpecialCharacters(word);
 
         // assert
         assertTrue(result);
@@ -48,7 +49,7 @@ class WordValidatorTest {
         String word = "helloworld";
 
         // act
-        boolean result = WordValidator.isWordContainsSpecialCharacters(word);
+        boolean result = wordValidator.isWordContainsSpecialCharacters(word);
 
         // assert
         assertFalse(result);
@@ -60,8 +61,8 @@ class WordValidatorTest {
         String word = "hello123@world";
 
         // act
-        boolean resultDigit = WordValidator.isWordContainsDigits(word);
-        boolean resultSpecial = WordValidator.isWordContainsSpecialCharacters(word);
+        boolean resultDigit = wordValidator.isWordContainsDigits(word);
+        boolean resultSpecial = wordValidator.isWordContainsSpecialCharacters(word);
 
         // assert
         assertTrue(resultDigit);
@@ -74,8 +75,8 @@ class WordValidatorTest {
         String word = "helloworld";
 
         // act
-        boolean resultDigit = WordValidator.isWordContainsDigits(word);
-        boolean resultSpecial = WordValidator.isWordContainsSpecialCharacters(word);
+        boolean resultDigit = wordValidator.isWordContainsDigits(word);
+        boolean resultSpecial = wordValidator.isWordContainsSpecialCharacters(word);
 
         // assert
         assertFalse(resultDigit);

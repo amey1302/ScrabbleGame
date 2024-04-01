@@ -6,7 +6,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class PointAllocator {
-    
+
     public static Map<Integer, String> scoreMapping = new HashMap<>();
     static {
         scoreMapping.put(1, "EAIONRTLSU");
@@ -20,5 +20,14 @@ public class PointAllocator {
     public static Map<Integer, String> getScoreMapping() {
         return scoreMapping;
     }
+    static int getScoreForLetter(char letter) throws InvalidLetterException {
+        for (Map.Entry<Integer, String> entry : PointAllocator.getScoreMapping().entrySet()) {
+            if (entry.getValue().indexOf(letter) != -1) {
+                return entry.getKey();
+            }
+        }
+        throw new InvalidLetterException("Invalid letter: " + letter);
+    }
+
 
 }

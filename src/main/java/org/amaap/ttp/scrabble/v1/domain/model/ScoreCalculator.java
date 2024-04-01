@@ -5,6 +5,7 @@ import org.amaap.ttp.scrabble.v1.domain.model.exception.EmptyWordException;
 import org.amaap.ttp.scrabble.v1.domain.model.exception.InvalidWordException;
 import org.amaap.ttp.scrabble.v1.domain.model.exception.WordContainsDigitsException;
 import org.amaap.ttp.scrabble.v1.domain.model.exception.WordContainsSpecialCharactersException;
+import org.amaap.ttp.scrabble.v1.domain.model.validator.WordValidator;
 
 import java.util.Map;
 
@@ -12,7 +13,7 @@ import static org.amaap.ttp.scrabble.v1.domain.model.validator.WordValidator.*;
 
 public class ScoreCalculator {
     public int getScoreForWord(String word) throws InvalidWordException {
-        isValid(word);
+        WordValidator.isValid(word);
 
         int score = 0;
         String upperCaseWord = word.toUpperCase();

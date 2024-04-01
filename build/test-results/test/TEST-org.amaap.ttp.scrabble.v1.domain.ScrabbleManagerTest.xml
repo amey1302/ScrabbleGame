@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="org.amaap.ttp.scrabble.v1.domain.ScrabbleManagerTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2024-04-01T18:36:21" hostname="LAPTOP-205J7BQ6" time="0.016">
+<testsuite name="org.amaap.ttp.scrabble.v1.domain.ScrabbleManagerTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2024-04-01T18:47:12" hostname="LAPTOP-205J7BQ6" time="0.02">
   <properties/>
-  <testcase name="shouldBeAbleToGetTheScoreForGivenWord()" classname="org.amaap.ttp.scrabble.v1.domain.ScrabbleManagerTest" time="0.002"/>
-  <testcase name="shouldBeAbleToGetScoreForTripleLetter()" classname="org.amaap.ttp.scrabble.v1.domain.ScrabbleManagerTest" time="0.001"/>
-  <testcase name="shouldBeAbleToGetScoreForDoubleLetter()" classname="org.amaap.ttp.scrabble.v1.domain.ScrabbleManagerTest" time="0.002"/>
-  <testcase name="shouldBeAbleToGetSingleInstance()" classname="org.amaap.ttp.scrabble.v1.domain.ScrabbleManagerTest" time="0.004"/>
-  <testcase name="shouldBeAbleToGetScoreForDoubleWord()" classname="org.amaap.ttp.scrabble.v1.domain.ScrabbleManagerTest" time="0.002"/>
+  <testcase name="shouldBeAbleToGetTheScoreForGivenWord()" classname="org.amaap.ttp.scrabble.v1.domain.ScrabbleManagerTest" time="0.009"/>
+  <testcase name="shouldBeAbleToGetScoreForTripleLetter()" classname="org.amaap.ttp.scrabble.v1.domain.ScrabbleManagerTest" time="0.002"/>
+  <testcase name="shouldBeAbleToGetScoreForDoubleLetter()" classname="org.amaap.ttp.scrabble.v1.domain.ScrabbleManagerTest" time="0.001"/>
+  <testcase name="shouldBeAbleToGetSingleInstance()" classname="org.amaap.ttp.scrabble.v1.domain.ScrabbleManagerTest" time="0.002"/>
+  <testcase name="shouldBeAbleToGetScoreForDoubleWord()" classname="org.amaap.ttp.scrabble.v1.domain.ScrabbleManagerTest" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
