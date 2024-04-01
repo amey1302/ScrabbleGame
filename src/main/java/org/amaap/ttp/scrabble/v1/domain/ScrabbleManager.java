@@ -1,12 +1,10 @@
 package org.amaap.ttp.scrabble.v1.domain;
 
 import org.amaap.ttp.scrabble.v1.domain.model.ScoreCalculator;
-import org.amaap.ttp.scrabble.v1.domain.model.Scrabble;
 import org.amaap.ttp.scrabble.v1.domain.model.exception.InvalidWordException;
 
 public class ScrabbleManager {
     private static ScrabbleManager scarbbleManager;
-    ScoreCalculator calculator = new ScoreCalculator();
     private ScrabbleManager() {
     }
     public static synchronized ScrabbleManager getInstance(){
@@ -16,7 +14,7 @@ public class ScrabbleManager {
     }
 
     public int getScoreForWord(String word) throws InvalidWordException {
-        Scrabble scrabble = Scrabble.accept(word);
-        return scrabble.getScoreForWord(scrabble.getWord());
+        ScoreCalculator scoreCalculator = new ScoreCalculator();
+        return scoreCalculator.getScoreForWord(word);
     }
 }

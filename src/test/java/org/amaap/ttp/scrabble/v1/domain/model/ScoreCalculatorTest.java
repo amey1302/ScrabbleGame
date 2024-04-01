@@ -6,17 +6,47 @@ import org.amaap.ttp.scrabble.v1.domain.model.exception.WordContainsDigitsExcept
 import org.amaap.ttp.scrabble.v1.domain.model.exception.WordContainsSpecialCharactersException;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.*;
 
 class ScoreCalculatorTest {
     ScoreCalculator scoreCalculator = new ScoreCalculator();
 
     @Test
-    void shouldBeAbleToReturnTheScoreForCapitalAlphabetWords() throws InvalidWordException {
+    void shouldThrowAnEmptyWordExceptionForNullWord() {
+        // act & assert
+        assertThrows(EmptyWordException.class, () -> scoreCalculator.getScoreForWord(null));
+    }
+
+    @Test
+    void shouldThrowEmptyWordExceptionForEmptyWord() {
+        // act & assert
+        assertThrows(EmptyWordException.class, () -> scoreCalculator.getScoreForWord(""));
+    }
+
+    @Test
+    void shouldThrowAnWordContainsDigitsExceptionWhenWordContainsDigits() {
+        // arrange
+        String word = "34ANT";
+
+        // act & assert
+        assertThrows(WordContainsDigitsException.class, () -> scoreCalculator.getScoreForWord(word));
+    }
+
+    @Test
+    void shouldThrowAnWordContainsSpecialCharactersExceptionWhenWordContainsSpecialCharacters() {
+        // arrange
+        String word = "&^%$ANT";
+        String word1 = "&&&&*(";
+
+        // act & assert
+        assertThrows(WordContainsSpecialCharactersException.class, () -> scoreCalculator.getScoreForWord(word));
+        assertThrows(WordContainsSpecialCharactersException.class, () -> scoreCalculator.getScoreForWord(word1));
+    }
+
+    @Test
+    void shouldReturnTheScoreForCapitalAlphabetWords() throws InvalidWordException {
         // arrange
         String word = "GUARDIAN";
-        Scrabble scrabble = Scrabble.accept(word);
         int expected = 10;
 
         // act
