@@ -12,9 +12,6 @@ import static org.amaap.ttp.scrabble.v1.domain.model.validator.WordValidator.isW
 import static org.amaap.ttp.scrabble.v1.domain.model.validator.WordValidator.isWordContainsSpecialCharacters;
 
 public class ScoreCalculator {
-    //private static final int[] POINTS = {1, 3, 3, 2, 1, 4, 2, 4, 1, 8, 5, 1, 3, 1, 1, 3, 10, 1, 1, 1, 1, 4, 4, 8, 4, 10};
-    PointAllocator pointAllocator = new PointAllocator();
-
     public int getScoreForWord(String word) throws InvalidWordException {
         if (null == word || word.isEmpty())
             throw new EmptyWordException("Word Should have Characters");
@@ -37,5 +34,8 @@ public class ScoreCalculator {
                 .map(Map.Entry::getKey)
                 .findFirst()
                 .orElse(0);
+    }
+    public int getScoreForWordWithMultiplier(String word, int wordMultiplier) throws InvalidWordException {
+        return getScoreForWord(word) * wordMultiplier;
     }
 }

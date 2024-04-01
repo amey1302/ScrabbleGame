@@ -29,7 +29,15 @@ public class ScrabbleManagerTest {
 
     }
     @Test
-    void shouldBeAbleToGetScoreForDoubleLetter(){
+    void shouldBeAbleToGetScoreForDoubleWord() throws InvalidWordException {
+        // arrange
+        int expectedScore = 14;
+        String word ="ABC";
 
+        // act
+        int actualScore = scarbbleManager.getScoreWordMultiplier(word,2);
+
+        // assert
+        assertEquals(expectedScore,actualScore);
     }
 }

@@ -5,9 +5,11 @@ import org.amaap.ttp.scrabble.v1.domain.model.exception.InvalidWordException;
 
 public class ScrabbleManager {
     private static ScrabbleManager scarbbleManager;
+
     private ScrabbleManager() {
     }
-    public static synchronized ScrabbleManager getInstance(){
+
+    public static synchronized ScrabbleManager getInstance() {
         if (scarbbleManager == null)
             scarbbleManager = new ScrabbleManager();
         return scarbbleManager;
@@ -18,5 +20,9 @@ public class ScrabbleManager {
         return scoreCalculator.getScoreForWord(word);
     }
 
+    public int getScoreWordMultiplier(String word, int multiplier) throws InvalidWordException {
+        ScoreCalculator scoreCalculator = new ScoreCalculator();
+        return scoreCalculator.getScoreForWordWithMultiplier(word, multiplier);
+    }
 
 }
