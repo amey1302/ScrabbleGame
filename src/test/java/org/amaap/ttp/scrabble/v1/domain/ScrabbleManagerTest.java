@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class ScoreCalculatorManagerTest {
+public class ScrabbleManagerTest {
     ScrabbleManager scarbbleManager = ScrabbleManager.getInstance();
 
     @Test
