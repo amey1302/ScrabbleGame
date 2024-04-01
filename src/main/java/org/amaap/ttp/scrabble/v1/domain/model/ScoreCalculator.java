@@ -8,17 +8,11 @@ import org.amaap.ttp.scrabble.v1.domain.model.exception.WordContainsSpecialChara
 
 import java.util.Map;
 
-import static org.amaap.ttp.scrabble.v1.domain.model.validator.WordValidator.isWordContainsDigits;
-import static org.amaap.ttp.scrabble.v1.domain.model.validator.WordValidator.isWordContainsSpecialCharacters;
+import static org.amaap.ttp.scrabble.v1.domain.model.validator.WordValidator.*;
 
 public class ScoreCalculator {
     public int getScoreForWord(String word) throws InvalidWordException {
-        if (null == word || word.isEmpty())
-            throw new EmptyWordException("Word Should have Characters");
-        if (isWordContainsDigits(word))
-            throw new WordContainsDigitsException("Word Contains Digits");
-        if (isWordContainsSpecialCharacters(word))
-            throw new WordContainsSpecialCharactersException("Word Contain Special Characters");
+        isValid(word);
 
         int score = 0;
         String upperCaseWord = word.toUpperCase();

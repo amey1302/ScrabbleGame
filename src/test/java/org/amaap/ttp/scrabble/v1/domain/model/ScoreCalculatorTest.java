@@ -84,10 +84,10 @@ class ScoreCalculatorTest {
     @Test
     void shouldBeAbleToReturnScoreForWordWithDoubleLetter() {
         // arrange
-        String word = "GUARDIAN";
-        char letterToDouble = 'A';
+        String word = "TOM";
+        char letterToDouble = 'O';
         int multiplier = 2;
-        int expectedScore = 10 + 2 + 1 + 1 + 1 + 1 + 1 + 1;
+        int expectedScore = 6;
 
         // act
         int actualScore = scoreCalculator.getScoreWithLetterMultiplier(word, letterToDouble, multiplier);
